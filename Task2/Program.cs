@@ -7,16 +7,13 @@
 
 Console.WriteLine("Введите число: ");
 int number = int.Parse(Console.ReadLine()??"");
+number = Math.Abs(number);
+string numberStr = Convert.ToString(number);
 
-if(number < 100)
+if(number >= 100)
+Console.WriteLine($"{numberStr[2]}");
+else
 Console.WriteLine("Третьей цифры нет");
-if(number > 99 && number < 1000)
-Console.WriteLine($"{number % 10}");
-if(number > 999 && number < 10000)
-Console.WriteLine($"{(number / 10) % 10}");
-if(number > 9999 && number < 100000)
-Console.WriteLine($"{(number / 100) % 10}");
 
-/* В этой задаче я не до конца разобрался как сделать, если число будет допустим восьмизначным или стозначным,
-можно конечно повторять все эти действия, но это нерационально */
+
 
